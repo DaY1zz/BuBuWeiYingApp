@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">布布为赢</string>
+    <string name="title1">涎裙属于杨新布贴的哪一种用途分类？</string>
+    <string name="answer1_1">婚嫁用品</string>
+    <string name="answer1_2">儿童用品</string>
+    <string name="answer1_3">宗教用品</string>
+    <string name="title2">阳新布贴大概起源于什么时代？</string>
+    <string name="answer2_1">明代</string>
+    <string name="answer2_2">宋朝</string>
+    <string name="answer2_3">清朝</string>
+</resources>

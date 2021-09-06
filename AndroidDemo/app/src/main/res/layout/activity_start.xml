@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/beijing"
+    tools:context=".StartActivity">
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:background="@mipmap/tuichu"
+        android:onClick="goBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnVoice"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="42dp"
+        android:background="@mipmap/yinyue"
+        android:onClick="changeMusicState"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewGroup_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="468dp"
+            android:layout_height="300dp"
+            android:background="@mipmap/fangkuai"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.503" />
+
+        <TextView
+            android:id="@+id/tv_userID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/fandolsong_bold"
+            android:gravity="center|left|center_vertical|fill_vertical|end"
+            android:text="账  号"
+            android:textColor="#ffffc200"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/view1"
+            app:layout_constraintTop_toTopOf="@+id/view1" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/fandolsong_bold"
+            android:text="密  码"
+            android:textColor="#ffffc200"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_userID"
+            app:layout_constraintTop_toBottomOf="@+id/tv_userID" />
+
+        <EditText
+            android:id="@+id/et_userID"
+            android:layout_width="262dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="103dp"
+            android:layout_marginTop="97dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/et_input"
+            android:imeOptions="flagNoExtractUi"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="@+id/view1"
+            app:layout_constraintTop_toTopOf="@+id/view1" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="262dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="11dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/et_input"
+            android:inputType="textPassword"
+            android:imeOptions="flagNoExtractUi"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="@+id/et_userID"
+            app:layout_constraintTop_toBottomOf="@+id/et_userID" />
+
+        <TextView
+            android:id="@+id/tv_regiser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/fandolsong_bold"
+            android:text="注册账号"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            android:onClick="register"
+            app:layout_constraintEnd_toEndOf="@+id/view1"
+            app:layout_constraintTop_toTopOf="@+id/view1" />
+
+        <TextView
+            android:id="@+id/tv_forgetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/fandolsong_bold"
+            android:text="忘记密码"
+            android:textColor="#ffffffff"
+            android:textSize="16dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_regiser"
+            app:layout_constraintTop_toBottomOf="@+id/tv_regiser" />
+
+        <Button
+            android:id="@+id/btnStartGame"
+            android:layout_width="260dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bc_btnstartgame"
+            android:fontFamily="@font/fandolsong_bold"
+            android:gravity="center"
+            android:text="开 始 游 戏"
+            android:onClick="startGame"
+            android:textColor="#FFC200"
+            android:textSize="27sp"
+            app:layout_constraintStart_toStartOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+
+        <Button
+            android:id="@+id/btnQQLogin"
+            android:layout_width="117dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/bc_btnlogin"
+            android:drawableLeft="@mipmap/qq"
+            android:drawablePadding="3dp"
+            android:fontFamily="@font/fandolsong_bold"
+            android:paddingLeft="5dp"
+            android:text="Q Q 登 录"
+            android:textSize="15sp"
+            android:textColor="#ffff"
+            app:layout_constraintBottom_toBottomOf="@+id/view1"
+            app:layout_constraintStart_toStartOf="@+id/view1" />
+
+        <Button
+            android:id="@+id/btnVXLogin"
+            android:layout_width="117dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/bc_btnlogin"
+            android:drawableLeft="@mipmap/weixin"
+            android:drawablePadding="3dp"
+            android:fontFamily="@font/fandolsong_bold"
+            android:paddingLeft="5dp"
+            android:text="微 信 登 录"
+            android:textSize="15sp"
+            android:textColor="#ffff"
+            app:layout_constraintBottom_toBottomOf="@+id/view1"
+            app:layout_constraintStart_toEndOf="@+id/btnQQLogin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewGroup_rg"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_rg"
+            android:layout_width="468dp"
+            android:layout_height="300dp"
+            android:background="@mipmap/fangkuai2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.495" />
+
+        <TextView
+            android:id="@+id/tv_password2_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/fandolsong_bold"
+            android:text="确认密码"
+            android:textColor="#ffffc200"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_userID_rg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password_rg" />
+
+        <TextView
+            android:id="@+id/tv_userID_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="82dp"
+            android:fontFamily="@font/fandolsong_bold"
+            android:gravity="center|left|center_vertical|fill_vertical|end"
+            android:text="新 账 号"
+            android:textColor="#ffffc200"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/view_rg"
+            app:layout_constraintTop_toTopOf="@+id/view_rg" />
+
+        <TextView
+            android:id="@+id/tv_password_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/fandolsong_bold"
+            android:text="密    码"
+            android:textColor="#ffffc200"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_userID_rg"
+            app:layout_constraintTop_toBottomOf="@+id/tv_userID_rg" />
+
+        <EditText
+            android:id="@+id/et_userID_rg"
+            android:layout_width="262dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="151dp"
+            android:layout_marginTop="78dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/et_input"
+            android:imeOptions="flagNoExtractUi"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="@+id/view_rg"
+            app:layout_constraintTop_toTopOf="@+id/view_rg" />
+
+        <EditText
+            android:id="@+id/et_password_rg"
+            android:layout_width="262dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="11dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/et_input"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="@+id/et_userID_rg"
+            app:layout_constraintTop_toBottomOf="@+id/et_userID_rg" />
+
+        <EditText
+            android:id="@+id/et_password2_rg"
+            android:layout_width="262dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="11dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/et_input"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="@+id/et_userID_rg"
+            app:layout_constraintTop_toBottomOf="@+id/et_password_rg" />
+
+        <Button
+            android:id="@+id/btnAssure"
+            android:layout_width="260dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="57dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bc_btnstartgame"
+            android:fontFamily="@font/fandolsong_bold"
+            android:gravity="center"
+            android:text="确  认"
+            android:onClick="registerConfirm"
+            android:textColor="#FFC200"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_rg"
+            app:layout_constraintEnd_toEndOf="@+id/view_rg" />
+
+        <TextView
+            android:id="@+id/tv_Tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="TextView"
+            android:textColor="#DF3C46"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnAssure"
+            app:layout_constraintStart_toStartOf="@+id/et_password2_rg"
+            app:layout_constraintTop_toBottomOf="@+id/et_password2_rg" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

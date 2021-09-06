@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnswerActivity"
+    android:background="@mipmap/beijing2">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="668dp"
+        android:layout_height="345dp"
+        android:background="@mipmap/fangkuai5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/fandolsong_bold"
+        android:letterSpacing="0.3"
+        android:text="请观看视频"
+        android:textColor="#2959A1"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <View
+        android:layout_width="96dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/bc_line"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <View
+        android:layout_width="96dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/bc_line"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="372dp"
+        android:layout_height="237dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:text="民间绣活（阳新布贴）是哪一年被列入第二批国家级非物质文化遗产名录？"
+        android:fontFamily="@font/fandolsong_bold"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <Button
+        android:id="@+id/btnKey1"
+        android:layout_width="224dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="17dp"
+        android:text="Button"
+        android:letterSpacing="0.15"
+        android:onClick="changeStatus1"
+        android:textColor="#fff"
+        android:fontFamily="@font/fandolsong_bold"
+        android:background="@drawable/bc_view3"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <Button
+        android:id="@+id/btnKey2"
+        android:layout_width="224dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="13dp"
+        android:text="Button"
+        android:letterSpacing="0.15"
+        android:onClick="changeStatus2"
+        android:fontFamily="@font/fandolsong_bold"
+        android:textColor="#fff"
+        android:background="@drawable/bc_view3"
+        app:layout_constraintStart_toStartOf="@+id/btnKey1"
+        app:layout_constraintTop_toBottomOf="@+id/btnKey1" />
+
+    <Button
+        android:id="@+id/btnKey3"
+        android:layout_width="224dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="13dp"
+        android:text="Button"
+        android:letterSpacing="0.15"
+        android:onClick="changeStatus3"
+        android:fontFamily="@font/fandolsong_bold"
+        android:textColor="#fff"
+        android:background="@drawable/bc_view3"
+        app:layout_constraintStart_toStartOf="@+id/btnKey2"
+        app:layout_constraintTop_toBottomOf="@+id/btnKey2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="115dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/bc_btnstartgame"
+        android:text="提交"
+        android:fontFamily="@font/fandolsong_bold"
+        android:letterSpacing="0.5"
+        android:textColor="#FFC200"
+        android:textSize="24sp"
+        android:onClick="submit"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4" />
+</androidx.constraintlayout.widget.ConstraintLayout>
