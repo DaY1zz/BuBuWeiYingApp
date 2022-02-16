@@ -8,4 +8,9 @@
     <string name="answer2_1">明代</string>
     <string name="answer2_2">宋朝</string>
     <string name="answer2_3">清朝</string>
+
+    <string name="set_1">其他蓝牙设备</string>
+    <string name="set_2">请选择蓝牙设备</string>
+
+
 </resources>

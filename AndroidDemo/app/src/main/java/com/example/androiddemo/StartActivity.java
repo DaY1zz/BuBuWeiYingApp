@@ -72,20 +72,6 @@ public class StartActivity extends AppCompatActivity {
         btn_voice = findViewById(R.id.btnVoice);
 
 
-        Intent intent = getIntent();
-
-        isPlayingMusic = intent.getBooleanExtra("isPlayingMusic",true);
-
-        if(!isPlayingMusic){
-            btn_voice.setBackground(getDrawable(R.mipmap.jingyin));
-        }else{
-            //播放背景音乐
-            Intent musicIntent = new Intent(StartActivity.this,BGMService.class);
-            startService(musicIntent);
-
-        }
-
-
 
         //设置两个icon大小
         Drawable qq = getDrawable(R.mipmap.qq);
@@ -98,6 +84,19 @@ public class StartActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Intent intent = getIntent();
+        isPlayingMusic = intent.getBooleanExtra("isPlayingMusic",true);
+        if(!isPlayingMusic){
+            btn_voice.setBackground(getDrawable(R.mipmap.jingyin));
+        }else{
+            //播放背景音乐
+            Intent musicIntent = new Intent(StartActivity.this,BGMService.class);
+            startService(musicIntent);
+        }
+    }
     //点击返回按钮
     public void goBack(View view) {
         if(startView.getVisibility()==View.VISIBLE){

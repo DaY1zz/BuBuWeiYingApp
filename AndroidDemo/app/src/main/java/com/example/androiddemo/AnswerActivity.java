@@ -2,7 +2,10 @@ package com.example.androiddemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothProfile;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -32,6 +35,7 @@ public class AnswerActivity extends AppCompatActivity {
 
 
     private MediaController mc;
+    @SuppressLint("MissingPermission")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,11 +47,14 @@ public class AnswerActivity extends AppCompatActivity {
         btn_answer2 = findViewById(R.id.btnKey2);
         btn_answer3 = findViewById(R.id.btnKey3);
 
+
+
         mc = new MediaController(this);
         videoView.setMediaController(mc);
 
         Intent intent = getIntent();
         videoIndex = intent.getIntExtra("Video",0);
+
 
 
         String videoUri;
